@@ -49,9 +49,13 @@ mpd_port = {{ ncmpcpp_mpd_service_port }}
 ## %f - filename   %D - directory  %P - priority   %d - disc
 ## $R - begin right alignment
 
+{% raw -%}
 ## {%x - %y} Will Be Displayed If Both Codes Are Present, Or Display '' Otherwise
+{% endraw %}
 
+{% raw -%}
 ## {%x}|{%y} Will Display The x Code If Present, Else Display y Code
+{% endraw %}
 
 ## %20x Will Limit The Width Of The The Displayed Code To 20 Chars
 
@@ -86,7 +90,9 @@ mpd_port = {{ ncmpcpp_mpd_service_port }}
 ################################### GLOBAL UI ###################################
 
 ## NCMPCPP Window Title Bar Text (Tags Only - Attributes Not Allowed)
+{% raw -%}
 #song_window_title_format = {%a - }{%t {(%y)}}|{%f}
+{% endraw %}
 
 ## Screen On Startup (help, playlist, browser, search_engine,
 ##   media_library, playlist_editor, tag_editor, outputs, visualizer, clock)
@@ -129,10 +135,14 @@ mpd_port = {{ ncmpcpp_mpd_service_port }}
 ##state_flags_color = default
 
 ## Top Section 1st Line ("Now-Playing" Song): [Album Artist] - [Album] ([Year])
+{% raw -%}
 #alternative_header_first_line_format = $b$1$aqqu$/a$9 {$5[%A]$9 - }{$4%b$9}{ ($4%y$9) } $1$atqq$/a$9$/b
+{% endraw %}
 
 ## Top Section 2nd Line ("Now-Playing" Song): [Artist] - [Title]
+{% raw -%}
 #alternative_header_second_line_format = $b$1$aqqu$/a$9 {$7%a$9 - }{$6%t$9}|{%f} $1$atqq$/a$9$/b
+{% endraw %}
 
 ## Header Bar Visibility Below Top Section (Shows Var Things In Diff UI Modes)
 #header_visibility = yes
@@ -204,7 +214,9 @@ mpd_port = {{ ncmpcpp_mpd_service_port }}
 #browser_sort_mode = format
 
 ## If browser_sort_mode = name, Define The Tags To Sort By
+{% raw -%}
 #browser_sort_format = {%n}{%t}|{%f}{(%l)}
+{% endraw %}
 
 ## Show Hidden Files/Dirs (i.e. Dotfiles/Dotdirs) In Browser
 #show_hidden_files_in_local_browser = no
@@ -221,7 +233,9 @@ mpd_port = {{ ncmpcpp_mpd_service_port }}
 #media_library_primary_tag = album_artist
 
 ## Right Songs Row Format
+{% raw -%}
 #song_library_format = [{%A}] {%a -} {%t}|{%f}
+{% endraw %}
 
 ############################### SEARCH ENGINE UI ################################
 
