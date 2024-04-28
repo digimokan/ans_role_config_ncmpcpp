@@ -1,0 +1,6 @@
+- name: "Install ncmpcpp"
+  ansible.builtin.include_tasks: install/main.yml
+
+- name: "Configure ncmpcpp"
+  ansible.builtin.include_tasks: configure/main.yml
+

@@ -1,0 +1,6 @@
+# main ncmpcpp user config dir
+ncmpcpp_user_config_dir: "/home/{{ ncmpcpp_user_name }}/.config/ncmpcpp"
+
+# main ncmpcpp config file path
+ncmpcpp_user_config_file_path: "{{ ncmpcpp_user_config_dir }}/config"
+

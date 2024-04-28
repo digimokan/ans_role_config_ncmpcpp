@@ -1,0 +1,6 @@
+- name: "Create ncmpcpp user config directories"
+  ansible.builtin.include_tasks: create_dirs/main.yml
+
+- name: "Write all ncmpcpp settings to the config file"
+  ansible.builtin.include_tasks: write_settings/main.yml
+

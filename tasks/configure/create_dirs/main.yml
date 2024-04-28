@@ -1,0 +1,7 @@
+- name: "Create ncmpcpp user config dir at '{{ ncmpcpp_user_config_dir }}'"
+  ansible.builtin.file:
+    path: "{{ ncmpcpp_user_config_dir }}"
+    state: directory
+  become: true
+  become_user: "{{ ncmpcpp_user_name }}"
+

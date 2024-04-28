@@ -1,0 +1,300 @@
+# vim: set filetype=conf:
+#
+# ANSIBLE-MANAGED CONFIGURATION FILE
+# Ref: https://github.com/ncmpcpp/ncmpcpp/blob/master/doc/config
+#
+
+# FILE PATHS ###################################################################
+
+################################# FILES / DIRS #################################
+
+# NCMPCPP Config Files Dir
+# ncmpcpp_directory = "{{ ncmpcpp_user_config_dir }}"
+
+# Music Files Dir (Should Be Same As Music Files Dir In mpd.conf)
+mpd_music_dir = "{{ ncmpcpp_music_dir }}"
+
+# Downloaded-Lyrics Dir (Warning: Other MPD Clients May Expect ~/.lyrics)
+# lyrics_directory = ~/.lyrics
+
+################################## MPD DAEMON ##################################
+
+# connect to mpd service on this host and port
+mpd_host = {{ ncmpcpp_mpd_service_host }}
+mpd_port = {{ ncmpcpp_mpd_service_port }}
+
+# Connection Timeout To Keep Trying MPD Daemon (Useful For Networked MPD)
+#mpd_connection_timeout = 5
+
+## Delay Between MPD-Data-Fetch And Playlist/Library/Etc Update
+#data_fetching_delay = no
+
+## External Editor To Use When Needed
+#external_editor = vim
+
+## External Editor Is Console Editor (yes for vim?)
+#use_console_editor = yes
+
+#################################### PLAYBACK ###################################
+
+## Crossfade Time Between Songs
+#mpd_crossfade_time = 5
+
+#################################### UI CODES ###################################
+
+##### SONG TAGS
+## %g - genre      %c - composer   %p - performer  %C - comment
+## %A - alb arts   %a - artist     %b - album      %y - date
+## %t - title      %n - trk# 01    %N - trk# 01/12 %l - length
+## %f - filename   %D - directory  %P - priority   %d - disc
+## $R - begin right alignment
+
+## {%x - %y} Will Be Displayed If Both Codes Are Present, Or Display '' Otherwise
+
+## {%x}|{%y} Will Display The x Code If Present, Else Display y Code
+
+## %20x Will Limit The Width Of The The Displayed Code To 20 Chars
+
+##### COLORS
+## $1 - black      $2 - red        $3 - green      $4 - yellow
+## $5 - blue       $6 - magenta    $7 - cyan       $8 - white
+## $9 - end of current color       $0 - default wdo col (discard all other cols)
+
+## {$1%x$9} Uses Black Color Then Returns To Previous color
+
+##### COLOR ATTRIBUTES
+## $b - bold text  $u - und text   $r - rev cols   $a - use alt charset (??)
+
+## {$b%x$/b} Uses Color Attribute, Then Ends Color Attribute
+
+## Note: Colors And Color Attributes Can Be Nested!! (See GLOBAL UI Examples)
+
+##### PLAYLIST COLUMN FORMAT
+
+## (20)[red]{a} Defines A 20%-Screen-Wide Artist Column In Red Text
+
+## (5f)[blue]{l} Defines A 20-Char-Wide Track Length Column In Red Text
+
+## (5f)[blue]{lr} Makes The Column Text Right-Aligned
+
+## (5f)[blue]{lr:Length} Gives The Column A Custom Name ("Length")
+
+## (15)[cyan]{t|f} Displays Title, Else Filename If No Title Tag
+
+## (20)[yellow]{AE} Prevents Empty Tag Marker If No Album Artist Tag Exists
+
+################################### GLOBAL UI ###################################
+
+## NCMPCPP Window Title Bar Text (Tags Only - Attributes Not Allowed)
+#song_window_title_format = {%a - }{%t {(%y)}}|{%f}
+
+## Screen On Startup (help, playlist, browser, search_engine,
+##   media_library, playlist_editor, tag_editor, outputs, visualizer, clock)
+#startup_screen = playlist
+
+## Focus Row Of Now-Playing Song On Startup
+#jump_to_now_playing_song_at_start = yes
+
+## Screen Switch Key Toggles
+#screen_switcher_mode = playlist, browser
+
+## Main Window Color (May Use default, Or red Or red_green For FG/BG)
+#main_window_color = yellow
+
+## 1st Color Used In Song Info, Tiny Tag Editor, Search Engine, Etc.
+#color1 = white
+
+## 2nd Color Used In Song Info, Tiny Tag Editor, Search Engine, Etc.
+#color2 = green
+
+## Top Section Of Global UI Mode (classic/alternative)
+#user_interface = alternative
+
+## Top Section Separator Bars Colors
+#alternative_ui_separator_color = black
+
+## Top Section Volume Color (May Use default, Or red Or red_green For FG/BG)
+#volume_color = default
+
+## Top Section Bitrate Visibility
+#display_bitrate = yes
+
+## Top Section Remaining Time Visibility
+#display_remaining_time = no
+
+## Top Section State Line Color (May Use default, Or red Or red_green For FG/BG)
+#state_line_color = default
+
+## Top Section State Flags Color (May Use default, Or red Or red_green For FG/BG)
+##state_flags_color = default
+
+## Top Section 1st Line ("Now-Playing" Song): [Album Artist] - [Album] ([Year])
+#alternative_header_first_line_format = $b$1$aqqu$/a$9 {$5[%A]$9 - }{$4%b$9}{ ($4%y$9) } $1$atqq$/a$9$/b
+
+## Top Section 2nd Line ("Now-Playing" Song): [Artist] - [Title]
+#alternative_header_second_line_format = $b$1$aqqu$/a$9 {$7%a$9 - }{$6%t$9}|{%f} $1$atqq$/a$9$/b
+
+## Header Bar Visibility Below Top Section (Shows Var Things In Diff UI Modes)
+#header_visibility = yes
+
+## Header Bar Wrap Text To Next Line If It Will Not Fit
+#header_text_scrolling = yes
+
+## Header Bar Color (May Use default, Or red Or red_green For FG/BG)
+#header_window_color = default
+
+## Bottom Song Progress Bar Look (2 Or 3 Chars)
+#progressbar_look = =>
+
+## Bottom Song Prog Bar Color (May Use default, Or red Or red_green For FG/BG)
+#progressbar_color = black
+
+## Bottom Song Prog Bar Color (May Use default, Or red Or red_green For FG/BG)
+#progressbar_elapsed_color = green
+
+## Center Highlighted Row On Screen When Scrolling Up/Down Through Rows
+#centered_cursor = no
+
+## Wrap Scolling Any Set Of Rows Back To Top When At The Last Row
+#cyclic_scrolling = no
+
+## Text To Display If Trying To Show A Tag That Is Not Set
+#empty_tag_marker = <empty>
+
+## Empty Tag Color (May Use default, Or red Or red_green For FG/BG)
+#empty_tag_color = red
+
+## Text To Display In Between Tags
+#tags_separator = " | "
+
+## Wrap/Nowrap Find Operations In Playlist/Browser (wrapped/normal)
+#default_find_mode = wrapped
+
+## Selected Item(s) Color
+#selected_item_prefix = $3
+#selected_item_suffix = $9
+
+################################## PLAYLIST UI ##################################
+
+## Playlist UI Mode (classic/columns)
+#playlist_display_mode = columns
+
+## Show Remaining Time Above Playlist Columns
+#playlist_show_remaining_time = yes
+
+## Shorten Total/Remaining Times Above Playlist Columns
+#playlist_shorten_total_times = yes
+
+## Columns For The Playlist
+#song_columns_list_format = (15)[blue]{A} (15)[cyan]{a} (20)[yellow]{b} (40)[magenta]{t|f:Title} (7f)[white]{lr:Length}
+
+## Put Horizontal Bar Between Groups Of Same-Album Playlist Rows
+#playlist_separate_albums = no
+
+## Highlight >>Selected<< Playlist Row For X Seconds (0 = Always Highlighted)
+#playlist_disable_highlight_delay = 0
+
+################################## BROWSER UI ###################################
+
+## Browser UI Mode (classic/columns)
+#browser_display_mode = columns
+
+## When Rows Of Songs Displayed In Browser, Define The Sort Order
+## Note: Options Are name / mtime / format / noop
+#browser_sort_mode = format
+
+## If browser_sort_mode = name, Define The Tags To Sort By
+#browser_sort_format = {%n}{%t}|{%f}{(%l)}
+
+## Show Hidden Files/Dirs (i.e. Dotfiles/Dotdirs) In Browser
+#show_hidden_files_in_local_browser = no
+
+## Allow Deleting Files/Dirs From Disk (Only In Browser UI)
+#allow_for_physical_item_deletion = yes
+
+############################### MEDIA LIBRARY UI ################################
+
+## Make Media Library Sort By mtime
+#media_library_sort_by_mtime = yes
+
+## First Column Of Media Lib (artist/album_artist/date/genre/composer/performer)
+#media_library_primary_tag = album_artist
+
+## Right Songs Row Format
+#song_library_format = [{%A}] {%a -} {%t}|{%f}
+
+############################### SEARCH ENGINE UI ################################
+
+## Search Engine UI Mode (classic/columns)
+#search_engine_display_mode = classic
+
+## Default Search Location (database/playlist) - Also Selectable In UI
+#default_place_to_search_in = database
+
+## Search Mode:
+##   1 - mpd built-in searching (no regexes, pattern matching)
+##   2 - ncmpcpp searching (pattmatching, but may need to download dbase...)
+##   3 - split searching (use mode 1 for dbase search, mode 2 for playlist srch)
+#search_engine_default_search_mode = 1
+
+## Type Of Regexes To use (none/basic/extended/perl)
+#regular_expressions = extended
+
+## After Successful Search, Block Fields In Search Engine Above Reset Button
+#block_search_constraints_change_if_items_found = yes
+
+############################### PLAYLIST EDITOR UI ##############################
+
+## Playlist Editor UI Mode (classic/columns)
+#playlist_editor_display_mode = classic
+
+## Do Not Use \?*:|"<> In Generated Filenames
+#generate_win32_compatible_filenames = yes
+
+## Confirm Playlist Deletion
+#ask_before_clearing_playlists = yes
+
+################################## TAG EDITOR UI ################################
+
+## Default Pattern Used By Tag Editor's Parser
+#default_tag_editor_pattern = %n - %t
+
+## Make Tag Editor Number Tracks 01/12 (if yes) Or Just 01 (if no)
+#tag_editor_extended_numeration = no
+
+#################################### PLAYBACK ###################################
+
+## Volume Change Step
+#volume_change_step = 5
+
+## Seek Forward/Backward In Song By An Increment
+#incremental_seeking = yes
+
+## Seek Forward/Backward Seek Increment
+#seek_time = 1
+
+## Execute Custom Command On Song Change (Think: Notification)
+##execute_on_song_change = ""
+
+################################ UNKNOWN SETTINGS ###############################
+######################## (CAN'T FIGURE OUT WHAT THEY DO) ########################
+
+##autocenter_mode = no
+
+##modified_item_prefix = $3> $9
+
+##discard_colors_if_item_is_selected = yes
+
+##browser_playlist_prefix = "$2playlist$9 "
+
+##statusbar_visibility = yes
+
+##statusbar_color = default
+
+##active_column_color = red
+
+##window_border_color = green
+
+##active_window_border = red
+#"
+

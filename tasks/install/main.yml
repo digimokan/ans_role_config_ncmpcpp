@@ -1,0 +1,7 @@
+- name: "Install the 'ncmpcpp' package"
+  ansible.builtin.package:
+    name: ncmpcpp
+    state: present
+  become: true
+  become_user: root
+

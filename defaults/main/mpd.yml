@@ -1,0 +1,6 @@
+# connect to mpd service on this host
+ncmpcpp_mpd_service_host: 'localhost'
+
+# connect to mpd service on this port
+ncmpcpp_mpd_service_port: 6600
+

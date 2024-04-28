@@ -1,0 +1,3 @@
+# command to execute to run ncmpcpp
+ncmpcpp_main_cmd: 'ncmpcpp'
+
