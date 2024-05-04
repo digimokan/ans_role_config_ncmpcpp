@@ -4,43 +4,41 @@
 # Ref: https://github.com/ncmpcpp/ncmpcpp/blob/master/doc/config
 #
 
-# FILE PATHS ###################################################################
+# PATHS ########################################################################
 
-################################# FILES / DIRS #################################
-
-# NCMPCPP Config Files Dir
-# ncmpcpp_directory = "{{ ncmpcpp_user_config_dir }}"
+# main ncmpcpp user config dir
+ncmpcpp_directory = "{{ ncmpcpp_user_config_dir }}"
 
 # Music Files Dir (Should Be Same As Music Files Dir In mpd.conf)
 mpd_music_dir = "{{ ncmpcpp_music_dir }}"
 
-# Downloaded-Lyrics Dir (Warning: Other MPD Clients May Expect ~/.lyrics)
-# lyrics_directory = ~/.lyrics
+# lyrics dir (other apps may expect ~/.lyrics)
+lyrics_directory = "{{ ncmpcpp_user_lyrics_dir }}"
 
-################################## MPD DAEMON ##################################
+# MPD DAEMON ###################################################################
 
 # connect to mpd service on this host and port
 mpd_host = {{ ncmpcpp_mpd_service_host }}
 mpd_port = {{ ncmpcpp_mpd_service_port }}
 
-# Connection Timeout To Keep Trying MPD Daemon (Useful For Networked MPD)
-#mpd_connection_timeout = 5
+# connection retry timeout to mpd service
+mpd_connection_timeout = {{ ncmpcpp_mpd_service_connection_retry_sec }}
 
-## Delay Between MPD-Data-Fetch And Playlist/Library/Etc Update
-#data_fetching_delay = no
+# add delay between mpd-data-fetch and playlist/library/etc update
+data_fetching_delay = {{ 'yes' if ncmpcpp_mpd_service_data_fetch_delay else 'no' }}
 
-## External Editor To Use When Needed
-#external_editor = vim
+# external editor to use when needed
+external_editor = "{{ ncmpcpp_external_text_editor_cmd }}"
 
-## External Editor Is Console Editor (yes for vim?)
-#use_console_editor = yes
+# external editor is console text editor
+use_console_editor = {{ 'yes' if ncmpcpp_external_text_editor_is_console_editor else 'no' }}
 
-#################################### PLAYBACK ###################################
+# PLAYBACK #####################################################################
 
 ## Crossfade Time Between Songs
 #mpd_crossfade_time = 5
 
-#################################### UI CODES ###################################
+# UI CODES #####################################################################
 
 ##### SONG TAGS
 ## %g - genre      %c - composer   %p - performer  %C - comment
@@ -87,7 +85,7 @@ mpd_port = {{ ncmpcpp_mpd_service_port }}
 
 ## (20)[yellow]{AE} Prevents Empty Tag Marker If No Album Artist Tag Exists
 
-################################### GLOBAL UI ###################################
+# GLOBAL UI ####################################################################
 
 ## NCMPCPP Window Title Bar Text (Tags Only - Attributes Not Allowed)
 {% raw -%}
@@ -184,7 +182,7 @@ mpd_port = {{ ncmpcpp_mpd_service_port }}
 #selected_item_prefix = $3
 #selected_item_suffix = $9
 
-################################## PLAYLIST UI ##################################
+# PLAYLIST UI ##################################################################
 
 ## Playlist UI Mode (classic/columns)
 #playlist_display_mode = columns
@@ -204,7 +202,7 @@ mpd_port = {{ ncmpcpp_mpd_service_port }}
 ## Highlight >>Selected<< Playlist Row For X Seconds (0 = Always Highlighted)
 #playlist_disable_highlight_delay = 0
 
-################################## BROWSER UI ###################################
+# BROWSER UI ###################################################################
 
 ## Browser UI Mode (classic/columns)
 #browser_display_mode = columns
@@ -224,7 +222,7 @@ mpd_port = {{ ncmpcpp_mpd_service_port }}
 ## Allow Deleting Files/Dirs From Disk (Only In Browser UI)
 #allow_for_physical_item_deletion = yes
 
-############################### MEDIA LIBRARY UI ################################
+# MEDIA LIBRARY UI #############################################################
 
 ## Make Media Library Sort By mtime
 #media_library_sort_by_mtime = yes
@@ -237,7 +235,7 @@ mpd_port = {{ ncmpcpp_mpd_service_port }}
 #song_library_format = [{%A}] {%a -} {%t}|{%f}
 {% endraw %}
 
-############################### SEARCH ENGINE UI ################################
+# SEARCH ENGINE UI #############################################################
 
 ## Search Engine UI Mode (classic/columns)
 #search_engine_display_mode = classic
@@ -257,7 +255,7 @@ mpd_port = {{ ncmpcpp_mpd_service_port }}
 ## After Successful Search, Block Fields In Search Engine Above Reset Button
 #block_search_constraints_change_if_items_found = yes
 
-############################### PLAYLIST EDITOR UI ##############################
+# PLAYLIST EDITOR UI ###########################################################
 
 ## Playlist Editor UI Mode (classic/columns)
 #playlist_editor_display_mode = classic
@@ -268,7 +266,7 @@ mpd_port = {{ ncmpcpp_mpd_service_port }}
 ## Confirm Playlist Deletion
 #ask_before_clearing_playlists = yes
 
-################################## TAG EDITOR UI ################################
+# TAG EDITOR UI ################################################################
 
 ## Default Pattern Used By Tag Editor's Parser
 #default_tag_editor_pattern = %n - %t
@@ -276,7 +274,7 @@ mpd_port = {{ ncmpcpp_mpd_service_port }}
 ## Make Tag Editor Number Tracks 01/12 (if yes) Or Just 01 (if no)
 #tag_editor_extended_numeration = no
 
-#################################### PLAYBACK ###################################
+# PLAYBACK #####################################################################
 
 ## Volume Change Step
 #volume_change_step = 5

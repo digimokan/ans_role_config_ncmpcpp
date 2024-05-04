@@ -4,3 +4,9 @@ ncmpcpp_mpd_service_host: 'localhost'
 # connect to mpd service on this port
 ncmpcpp_mpd_service_port: 6600
 
+# connection retry timeout to mpd service
+ncmpcpp_mpd_service_connection_retry_sec: 5
+
+# add delay between mpd-data-fetch and playlist/library/etc update
+ncmpcpp_mpd_service_data_fetch_delay: false
+

@@ -1,0 +1,6 @@
+# external editor to use when needed
+ncmpcpp_external_text_editor_cmd: 'vi'
+
+# external editor is console text editor
+ncmpcpp_external_text_editor_is_console_editor: true
+
