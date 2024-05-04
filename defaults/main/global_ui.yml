@@ -1,3 +1,3 @@
 # ncmpcpp window title bar text (tags only - attributes not allowed)
-ncmpcpp_window_tile_bar_text: '{%%a - }{%%t {(%%y)}}|{%%f}'
+ncmpcpp_window_tile_bar_text: !unsafe '{%a - }{%t {(%y)}}|{%f}'
 
