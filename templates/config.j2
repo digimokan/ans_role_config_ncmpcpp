@@ -35,62 +35,60 @@ use_console_editor = {{ 'yes' if ncmpcpp_external_text_editor_is_console_editor 
 
 # PLAYBACK #####################################################################
 
-## Crossfade Time Between Songs
-#mpd_crossfade_time = 5
+# crossfade time between tracks
+mpd_crossfade_time = {{ ncmpcpp_crossfade_between_tracks_sec }}
 
 # UI CODES #####################################################################
 
-##### SONG TAGS
-## %g - genre      %c - composer   %p - performer  %C - comment
-## %A - alb arts   %a - artist     %b - album      %y - date
-## %t - title      %n - trk# 01    %N - trk# 01/12 %l - length
-## %f - filename   %D - directory  %P - priority   %d - disc
-## $R - begin right alignment
+#### SONG TAGS
+# %g - genre      %c - composer   %p - performer  %C - comment
+# %A - alb arts   %a - artist     %b - album      %y - date
+# %t - title      %n - trk# 01    %N - trk# 01/12 %l - length
+# %f - filename   %D - directory  %P - priority   %d - disc
+# $R - begin right alignment
 
 {% raw -%}
-## {%x - %y} Will Be Displayed If Both Codes Are Present, Or Display '' Otherwise
+# {%x - %y} Will Be Displayed If Both Codes Are Present, Or Display '' Otherwise
 {% endraw %}
 
 {% raw -%}
-## {%x}|{%y} Will Display The x Code If Present, Else Display y Code
+# {%x}|{%y} Will Display The x Code If Present, Else Display y Code
 {% endraw %}
 
-## %20x Will Limit The Width Of The The Displayed Code To 20 Chars
+# %20x Will Limit The Width Of The The Displayed Code To 20 Chars
 
-##### COLORS
-## $1 - black      $2 - red        $3 - green      $4 - yellow
-## $5 - blue       $6 - magenta    $7 - cyan       $8 - white
-## $9 - end of current color       $0 - default wdo col (discard all other cols)
+#### COLORS
+# $1 - black      $2 - red        $3 - green      $4 - yellow
+# $5 - blue       $6 - magenta    $7 - cyan       $8 - white
+# $9 - end of current color       $0 - default wdo col (discard all other cols)
 
 ## {$1%x$9} Uses Black Color Then Returns To Previous color
 
-##### COLOR ATTRIBUTES
-## $b - bold text  $u - und text   $r - rev cols   $a - use alt charset (??)
+#### COLOR ATTRIBUTES
+# $b - bold text  $u - und text   $r - rev cols   $a - use alt charset (??)
 
-## {$b%x$/b} Uses Color Attribute, Then Ends Color Attribute
+# {$b%x$/b} Uses Color Attribute, Then Ends Color Attribute
 
-## Note: Colors And Color Attributes Can Be Nested!! (See GLOBAL UI Examples)
+# Note: Colors And Color Attributes Can Be Nested!! (See GLOBAL UI Examples)
 
-##### PLAYLIST COLUMN FORMAT
+#### PLAYLIST COLUMN FORMAT
 
-## (20)[red]{a} Defines A 20%-Screen-Wide Artist Column In Red Text
+# (20)[red]{a} Defines A 20%-Screen-Wide Artist Column In Red Text
 
-## (5f)[blue]{l} Defines A 20-Char-Wide Track Length Column In Red Text
+# (5f)[blue]{l} Defines A 20-Char-Wide Track Length Column In Red Text
 
-## (5f)[blue]{lr} Makes The Column Text Right-Aligned
+# (5f)[blue]{lr} Makes The Column Text Right-Aligned
 
-## (5f)[blue]{lr:Length} Gives The Column A Custom Name ("Length")
+# (5f)[blue]{lr:Length} Gives The Column A Custom Name ("Length")
 
-## (15)[cyan]{t|f} Displays Title, Else Filename If No Title Tag
+# (15)[cyan]{t|f} Displays Title, Else Filename If No Title Tag
 
-## (20)[yellow]{AE} Prevents Empty Tag Marker If No Album Artist Tag Exists
+# (20)[yellow]{AE} Prevents Empty Tag Marker If No Album Artist Tag Exists
 
 # GLOBAL UI ####################################################################
 
-## NCMPCPP Window Title Bar Text (Tags Only - Attributes Not Allowed)
-{% raw -%}
-#song_window_title_format = {%a - }{%t {(%y)}}|{%f}
-{% endraw %}
+# ncmpcpp window title bar text (tags only - attributes not allowed)
+song_window_title_format = {{ ncmpcpp_window_tile_bar_text }}
 
 ## Screen On Startup (help, playlist, browser, search_engine,
 ##   media_library, playlist_editor, tag_editor, outputs, visualizer, clock)

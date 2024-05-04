@@ -1,0 +1,3 @@
+# crossfade time between tracks
+ncmpcpp_crossfade_between_tracks_sec: 5
+

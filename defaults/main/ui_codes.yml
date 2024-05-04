@@ -1,0 +1,41 @@
+#### SONG TAGS
+# %g - genre      %c - composer   %p - performer  %C - comment
+# %A - alb arts   %a - artist     %b - album      %y - date
+# %t - title      %n - trk# 01    %N - trk# 01/12 %l - length
+# %f - filename   %D - directory  %P - priority   %d - disc
+# $R - begin right alignment
+
+# {%x - %y} Will Be Displayed If Both Codes Are Present, Or Display '' Otherwise
+
+# {%x}|{%y} Will Display The x Code If Present, Else Display y Code
+
+# %20x Will Limit The Width Of The The Displayed Code To 20 Chars
+
+#### COLORS
+# $1 - black      $2 - red        $3 - green      $4 - yellow
+# $5 - blue       $6 - magenta    $7 - cyan       $8 - white
+# $9 - end of current color       $0 - default wdo col (discard all other cols)
+
+# {$1%x$9} Uses Black Color Then Returns To Previous color
+
+#### COLOR ATTRIBUTES
+# $b - bold text  $u - und text   $r - rev cols   $a - use alt charset (??)
+
+# {$b%x$/b} Uses Color Attribute, Then Ends Color Attribute
+
+# Note: Colors And Color Attributes Can Be Nested!! (See GLOBAL UI Examples)
+
+#### PLAYLIST COLUMN FORMAT
+
+# (20)[red]{a} Defines A 20%-Screen-Wide Artist Column In Red Text
+
+# (5f)[blue]{l} Defines A 20-Char-Wide Track Length Column In Red Text
+
+# (5f)[blue]{lr} Makes The Column Text Right-Aligned
+
+# (5f)[blue]{lr:Length} Gives The Column A Custom Name ("Length")
+
+# (15)[cyan]{t|f} Displays Title, Else Filename If No Title Tag
+
+# (20)[yellow]{AE} Prevents Empty Tag Marker If No Album Artist Tag Exists
+
