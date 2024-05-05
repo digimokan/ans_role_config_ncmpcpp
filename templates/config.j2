@@ -38,6 +38,18 @@ use_console_editor = {{ 'yes' if ncmpcpp_external_text_editor_is_console_editor 
 # crossfade time between tracks
 mpd_crossfade_time = {{ ncmpcpp_crossfade_between_tracks_sec }}
 
+# volume change step
+volume_change_step = {{ ncmpcpp_volume_change_step_pct }}
+
+# seek forward/backward in track by an increment
+incremental_seeking = {{ 'yes' if ncmpcpp_incremental_track_seek_enable else 'no' }}
+
+# seek forward/backward track seek increment
+seek_time = {{ ncmpcpp_incremental_track_seek_step }}
+
+# execute custom command on track change (e.g. a notification)
+execute_on_song_change = {{ ncmpcpp_exec_custom_cmd_on_track_change }}
+
 # GLOBAL UI ####################################################################
 
 # ncmpcpp window title bar text (tags only - attributes not allowed)
@@ -220,18 +232,4 @@ selected_item_suffix = {{ ncmpcpp_selected_item_suffix }}
 
 ## Make Tag Editor Number Tracks 01/12 (if yes) Or Just 01 (if no)
 #tag_editor_extended_numeration = no
-
-# PLAYBACK #####################################################################
-
-## Volume Change Step
-#volume_change_step = 5
-
-## Seek Forward/Backward In Song By An Increment
-#incremental_seeking = yes
-
-## Seek Forward/Backward Seek Increment
-#seek_time = 1
-
-## Execute Custom Command On Song Change (Think: Notification)
-##execute_on_song_change = ""
 

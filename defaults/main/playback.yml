@@ -1,3 +1,15 @@
 # crossfade time between tracks
 ncmpcpp_crossfade_between_tracks_sec: 5
 
+# volume change step
+ncmpcpp_volume_change_step_pct: 5
+
+# seek forward/backward in track by an increment
+ncmpcpp_incremental_track_seek_enable: true
+
+# seek forward/backward track seek increment
+ncmpcpp_incremental_track_seek_step: 1
+
+# execute custom command on track change (e.g. a notification)
+ncmpcpp_exec_custom_cmd_on_track_change: ""
+
