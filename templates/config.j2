@@ -108,10 +108,10 @@ progressbar_color = {{ ncmpcpp_progress_bar_color }}
 progressbar_elapsed_color = {{ ncmpcpp_progress_bar_elapsed_color }}
 
 # center highlighted row on screen when scrolling up/down through rows
-centered_cursor = {{ ncmpcpp_center_highlighted_row_on_screen }}
+centered_cursor = {{ 'yes' if ncmpcpp_center_highlighted_row_on_screen else 'no' }}
 
 # wrap scolling any set of rows back to top when at the last row
-cyclic_scrolling = {{ ncmpcpp_wrap_scrolling }}
+cyclic_scrolling = {{ 'yes' if ncmpcpp_wrap_scrolling else 'no' }}
 
 # text to display if trying to show a tag that is not Set
 empty_tag_marker = "{{ ncmpcpp_empty_tag_placeholder_text }}"
