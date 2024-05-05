@@ -38,147 +38,96 @@ use_console_editor = {{ 'yes' if ncmpcpp_external_text_editor_is_console_editor 
 # crossfade time between tracks
 mpd_crossfade_time = {{ ncmpcpp_crossfade_between_tracks_sec }}
 
-# UI CODES #####################################################################
-
-#### SONG TAGS
-# %g - genre      %c - composer   %p - performer  %C - comment
-# %A - alb arts   %a - artist     %b - album      %y - date
-# %t - title      %n - trk# 01    %N - trk# 01/12 %l - length
-# %f - filename   %D - directory  %P - priority   %d - disc
-# $R - begin right alignment
-
-{% raw -%}
-# {%x - %y} Will Be Displayed If Both Codes Are Present, Or Display '' Otherwise
-{% endraw %}
-
-{% raw -%}
-# {%x}|{%y} Will Display The x Code If Present, Else Display y Code
-{% endraw %}
-
-# %20x Will Limit The Width Of The The Displayed Code To 20 Chars
-
-#### COLORS
-# $1 - black      $2 - red        $3 - green      $4 - yellow
-# $5 - blue       $6 - magenta    $7 - cyan       $8 - white
-# $9 - end of current color       $0 - default wdo col (discard all other cols)
-
-## {$1%x$9} Uses Black Color Then Returns To Previous color
-
-#### COLOR ATTRIBUTES
-# $b - bold text  $u - und text   $r - rev cols   $a - use alt charset (??)
-
-# {$b%x$/b} Uses Color Attribute, Then Ends Color Attribute
-
-# Note: Colors And Color Attributes Can Be Nested!! (See GLOBAL UI Examples)
-
-#### PLAYLIST COLUMN FORMAT
-
-# (20)[red]{a} Defines A 20%-Screen-Wide Artist Column In Red Text
-
-# (5f)[blue]{l} Defines A 20-Char-Wide Track Length Column In Red Text
-
-# (5f)[blue]{lr} Makes The Column Text Right-Aligned
-
-# (5f)[blue]{lr:Length} Gives The Column A Custom Name ("Length")
-
-# (15)[cyan]{t|f} Displays Title, Else Filename If No Title Tag
-
-# (20)[yellow]{AE} Prevents Empty Tag Marker If No Album Artist Tag Exists
-
 # GLOBAL UI ####################################################################
 
 # ncmpcpp window title bar text (tags only - attributes not allowed)
 song_window_title_format = {{ ncmpcpp_window_tile_bar_text }}
 
-## Screen On Startup (help, playlist, browser, search_engine,
-##   media_library, playlist_editor, tag_editor, outputs, visualizer, clock)
-#startup_screen = playlist
+# startup screen: help, playlist, browser, search_engine, media_library,
+#                 playlist_editor, tag_editor, outputs, visualizer, clock
+startup_screen = {{ ncmpcpp_startup_screen }}
 
-## Focus Row Of Now-Playing Song On Startup
-#jump_to_now_playing_song_at_start = yes
+# focus row of now-playing track on startup
+jump_to_now_playing_song_at_start = {{ 'yes' if ncmpcpp_focus_now_playing_track_on_start else 'no' }}
 
-## Screen Switch Key Toggles
-#screen_switcher_mode = playlist, browser
+# screen switch key toggles between these two screens
+screen_switcher_mode = {{ ncmpcpp_screen_switch_toggle }}
 
-## Main Window Color (May Use default, Or red Or red_green For FG/BG)
-#main_window_color = yellow
+# main window color: 'default', 'red', 'red_green' (for fg/bg)
+main_window_color = {{ ncmpcpp_main_window_color }}
 
-## 1st Color Used In Song Info, Tiny Tag Editor, Search Engine, Etc.
-#color1 = white
+# primary color used in song info, tiny tag editor, search engine, etc.
+color1 = {{ ncmpcpp_primary_ui_color }}
 
-## 2nd Color Used In Song Info, Tiny Tag Editor, Search Engine, Etc.
-#color2 = green
+# secondary color used in song info, tiny tag editor, search engine, etc.
+color2 = {{ ncmpcpp_secondary_ui_color }}
 
-## Top Section Of Global UI Mode (classic/alternative)
-#user_interface = alternative
+# top section of global UI mode (classic/alternative)
+user_interface = {{ ncmpcpp_global_ui_mode }}
 
-## Top Section Separator Bars Colors
-#alternative_ui_separator_color = black
+# top section separator bars colors
+alternative_ui_separator_color = {{ ncmpcpp_top_section_sep_bar_colors }}
 
-## Top Section Volume Color (May Use default, Or red Or red_green For FG/BG)
-#volume_color = default
+# top section volume color: 'default', 'red', 'red_green' (for fg/bg)
+volume_color = {{ ncmpcpp_top_section_volume_color }}
 
-## Top Section Bitrate Visibility
-#display_bitrate = yes
+# show bitrate in top section
+display_bitrate = {{ 'yes' if ncmpcpp_top_section_show_bitrate else 'no' }}
 
-## Top Section Remaining Time Visibility
-#display_remaining_time = no
+# show time-remaining in top section
+display_remaining_time = {{ 'yes' if ncmpcpp_top_section_show_time_remaining else 'no' }}
 
-## Top Section State Line Color (May Use default, Or red Or red_green For FG/BG)
-#state_line_color = default
+# top section state line color: 'default', 'red', 'red_green' (for fg/bg)
+state_line_color = {{ ncmpcpp_top_section_state_line_color }}
 
-## Top Section State Flags Color (May Use default, Or red Or red_green For FG/BG)
-##state_flags_color = default
+# top section state flags color: 'default', 'red', 'red_green' (for fg/bg)
+state_flags_color = {{ ncmpcpp_top_section_flags_color }}
 
-## Top Section 1st Line ("Now-Playing" Song): [Album Artist] - [Album] ([Year])
-{% raw -%}
-#alternative_header_first_line_format = $b$1$aqqu$/a$9 {$5[%A]$9 - }{$4%b$9}{ ($4%y$9) } $1$atqq$/a$9$/b
-{% endraw %}
+# top section 1st line ("now-playing" song): [album artist] - [album] ([year])
+alternative_header_first_line_format = {{ ncmpcpp_top_section_line_1 }}
 
-## Top Section 2nd Line ("Now-Playing" Song): [Artist] - [Title]
-{% raw -%}
-#alternative_header_second_line_format = $b$1$aqqu$/a$9 {$7%a$9 - }{$6%t$9}|{%f} $1$atqq$/a$9$/b
-{% endraw %}
+# top section 2nd line ("now-playing" song): [artist] - [title]
+alternative_header_second_line_format = {{ ncmpcpp_top_section_line_2 }}
 
-## Header Bar Visibility Below Top Section (Shows Var Things In Diff UI Modes)
-#header_visibility = yes
+# show header bar below top section (shows various things in different UI modes)
+header_visibility = {{ 'yes' if ncmpcpp_show_header_bar_below_top_section else 'no' }}
 
-## Header Bar Wrap Text To Next Line If It Will Not Fit
-#header_text_scrolling = yes
+# header bar wrap text to next line if it will not fit
+header_text_scrolling = {{ 'yes' if ncmpcpp_wrap_header_to_next_line else 'no' }}
 
-## Header Bar Color (May Use default, Or red Or red_green For FG/BG)
-#header_window_color = default
+# header bar color: 'default', 'red', 'red_green' (for fg/bg)
+header_window_color = {{ ncmpcpp_header_bar_color }}
 
-## Bottom Song Progress Bar Look (2 Or 3 Chars)
-#progressbar_look = =>
+# bottom song progress bar chars (2 or 3 chars)
+progressbar_look = "{{ ncmpcpp_progress_bar_chars }}"
 
-## Bottom Song Prog Bar Color (May Use default, Or red Or red_green For FG/BG)
-#progressbar_color = black
+# bottom song progress bar color: 'default', 'red', 'red_green' (for fg/bg)
+progressbar_color = {{ ncmpcpp_progress_bar_color }}
 
-## Bottom Song Prog Bar Color (May Use default, Or red Or red_green For FG/BG)
-#progressbar_elapsed_color = green
+# bottom song prog bar elapsed color: 'default', 'red', 'red_green' (for fg/bg)
+progressbar_elapsed_color = {{ ncmpcpp_progress_bar_elapsed_color }}
 
-## Center Highlighted Row On Screen When Scrolling Up/Down Through Rows
-#centered_cursor = no
+# center highlighted row on screen when scrolling up/down through rows
+centered_cursor = {{ ncmpcpp_center_highlighted_row_on_screen }}
 
-## Wrap Scolling Any Set Of Rows Back To Top When At The Last Row
-#cyclic_scrolling = no
+# wrap scolling any set of rows back to top when at the last row
+cyclic_scrolling = {{ ncmpcpp_wrap_scrolling }}
 
-## Text To Display If Trying To Show A Tag That Is Not Set
-#empty_tag_marker = <empty>
+# text to display if trying to show a tag that is not Set
+empty_tag_marker = "{{ ncmpcpp_empty_tag_placeholder_text }}"
 
-## Empty Tag Color (May Use default, Or red Or red_green For FG/BG)
-#empty_tag_color = red
+# empty tag color: 'default', 'red', 'red_green' (for fg/bg)
+empty_tag_color = {{ ncmpcpp_empty_tag_color }}
 
-## Text To Display In Between Tags
-#tags_separator = " | "
+# text to display in between tags
+tags_separator = "{{ ncmpcpp_tag_separator_chars }}"
 
-## Wrap/Nowrap Find Operations In Playlist/Browser (wrapped/normal)
-#default_find_mode = wrapped
+# wrap find operations in playlist/browser:  'wrapped', 'normal'
+default_find_mode = {{ 'wrapped' if ncmpcpp_wrap_find_operations else 'normal' }}
 
-## Selected Item(s) Color
-#selected_item_prefix = $3
-#selected_item_suffix = $9
+# selected item(s) colors
+selected_item_prefix = {{ ncmpcpp_selected_item_prefix }}
+selected_item_suffix = {{ ncmpcpp_selected_item_suffix }}
 
 # PLAYLIST UI ##################################################################
 

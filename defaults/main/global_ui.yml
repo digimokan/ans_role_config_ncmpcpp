@@ -1,3 +1,89 @@
 # ncmpcpp window title bar text (tags only - attributes not allowed)
 ncmpcpp_window_tile_bar_text: !unsafe '{%a - }{%t {(%y)}}|{%f}'
 
+# startup screen: help, playlist, browser, search_engine, media_library,
+#                 playlist_editor, tag_editor, outputs, visualizer, clock
+ncmpcpp_startup_screen: 'playlist'
+
+# focus row of now-playing track on startup
+ncmpcpp_focus_now_playing_track_on_start: true
+
+# screen switch key toggles between these two screens
+ncmpcpp_screen_switch_toggle: 'playlist, browser'
+
+# main window color: 'default', 'red', 'red_green' (for fg/bg)
+ncmpcpp_main_window_color: 'yellow'
+
+# primary color used in song info, tiny tag editor, search engine, etc.
+ncmpcpp_primary_ui_color: 'white'
+
+# secondary color used in song info, tiny tag editor, search engine, etc.
+ncmpcpp_secondary_ui_color: 'green'
+
+# top section of global UI mode (classic/alternative)
+ncmpcpp_global_ui_mode: 'alternative'
+
+# top section separator bars colors
+ncmpcpp_top_section_sep_bar_colors: 'black'
+
+# top section volume color: 'default', 'red', 'red_green' (for fg/bg)
+ncmpcpp_top_section_volume_color: 'default'
+
+# show bitrate in top section
+ncmpcpp_top_section_show_bitrate: true
+
+# show time-remaining in top section
+ncmpcpp_top_section_show_time_remaining: false
+
+# top section state line color: 'default', 'red', 'red_green' (for fg/bg)
+ncmpcpp_top_section_state_line_color: 'default'
+
+# top section state flags color: 'default', 'red', 'red_green' (for fg/bg)
+ncmpcpp_top_section_flags_color: 'default'
+
+# top section 1st line ("now-playing" song): [album artist] - [album] ([year])
+ncmpcpp_top_section_line_1: !unsafe '$b$1$aqqu$/a$9 {$5[%A]$9 - }{$4%b$9}{ ($4%y$9) } $1$atqq$/a$9$/b'
+
+# top section 2nd line ("now-playing" song): [artist] - [title]
+ncmpcpp_top_section_line_2: !unsafe '$b$1$aqqu$/a$9 {$7%a$9 - }{$6%t$9}|{%f} $1$atqq$/a$9$/b'
+
+# show header bar below top section (shows various things in different UI modes)
+ncmpcpp_show_header_bar_below_top_section: true
+
+# header bar wrap text to next line if it will not fit
+ncmpcpp_wrap_header_to_next_line: true
+
+# header bar color: 'default', 'red', 'red_green' (for fg/bg)
+ncmpcpp_header_bar_color: 'default'
+
+# bottom song progress bar chars (2 or 3 chars)
+ncmpcpp_progress_bar_chars: '=>'
+
+# bottom song progress bar color: 'default', 'red', 'red_green' (for fg/bg)
+ncmpcpp_progress_bar_color: 'black'
+
+# bottom song prog bar elapsed color: 'default', 'red', 'red_green' (for fg/bg)
+ncmpcpp_progress_bar_elapsed_color: 'green'
+
+# center highlighted row on screen when scrolling up/down through rows
+ncmpcpp_center_highlighted_row_on_screen: false
+
+# wrap scolling any set of rows back to top when at the last row
+ncmpcpp_wrap_scrolling: false
+
+# text to display if trying to show a tag that is not Set
+ncmpcpp_empty_tag_placeholder_text: '<empty>'
+
+# empty tag color: 'default', 'red', 'red_green' (for fg/bg)
+ncmpcpp_empty_tag_color: 'red'
+
+# text to display in between tags
+ncmpcpp_tag_separator_chars: ' | '
+
+# wrap find operations in playlist/browser:  'wrapped', 'normal'
+ncmpcpp_wrap_find_operations: true
+
+# selected item(s) colors
+ncmpcpp_selected_item_prefix: '$3'
+ncmpcpp_selected_item_suffix: '$9'
+
