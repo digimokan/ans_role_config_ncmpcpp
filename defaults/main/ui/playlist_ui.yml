@@ -1,0 +1,18 @@
+# playlist ui mode: 'classic', 'columns'
+ncmpcpp_playlist_ui_mode: 'columns'
+
+# show remaining time above playlist columns
+ncmpcpp_playlist_show_time_remaining: true
+
+# shorten total/remaining times above playlist columns
+ncmpcpp_playlist_shorten_total_and_rem_times: true
+
+# playlist columns
+ncmpcpp_playlist_columns: !unsafe '(15)[blue]{A} (15)[cyan]{a} (20)[yellow]{b} (40)[magenta]{t|f:Title} (7f)[white]{lr:Length}'
+
+# put horizontal bar between groups of same-album playlist rows
+ncmpcpp_playlist_album_separator_bar: false
+
+# highlight >>selected<< playlist row for X seconds (0 = always highlighted)
+ncmpcpp_playlist_highlight_sel_row_seconds: 0
+

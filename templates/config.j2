@@ -143,23 +143,23 @@ selected_item_suffix = {{ ncmpcpp_selected_item_suffix }}
 
 # PLAYLIST UI ##################################################################
 
-## Playlist UI Mode (classic/columns)
-#playlist_display_mode = columns
+# playlist ui mode: 'classic', 'columns'
+playlist_display_mode = {{ ncmpcpp_playlist_ui_mode }}
 
-## Show Remaining Time Above Playlist Columns
-#playlist_show_remaining_time = yes
+# show remaining time above playlist columns
+playlist_show_remaining_time = {{ 'yes' if ncmpcpp_playlist_show_time_remaining else 'no' }}
 
-## Shorten Total/Remaining Times Above Playlist Columns
-#playlist_shorten_total_times = yes
+# shorten total/remaining times above playlist columns
+playlist_shorten_total_times = {{ 'yes' if ncmpcpp_playlist_shorten_total_and_rem_times else 'no' }}
 
-## Columns For The Playlist
-#song_columns_list_format = (15)[blue]{A} (15)[cyan]{a} (20)[yellow]{b} (40)[magenta]{t|f:Title} (7f)[white]{lr:Length}
+# playlist columns
+song_columns_list_format = {{ ncmpcpp_playlist_columns }}
 
-## Put Horizontal Bar Between Groups Of Same-Album Playlist Rows
-#playlist_separate_albums = no
+# put horizontal bar between groups of same-album playlist rows
+playlist_separate_albums = {{ 'yes' if ncmpcpp_playlist_album_separator_bar else 'no' }}
 
-## Highlight >>Selected<< Playlist Row For X Seconds (0 = Always Highlighted)
-#playlist_disable_highlight_delay = 0
+# highlight >>selected<< playlist row for X seconds (0 = always highlighted)
+playlist_disable_highlight_delay = {{ ncmpcpp_playlist_highlight_sel_row_seconds }}
 
 # BROWSER UI ###################################################################
 
