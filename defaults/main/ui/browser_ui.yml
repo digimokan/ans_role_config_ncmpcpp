@@ -1,0 +1,15 @@
+# browser ui mode: 'classic', 'columns'
+ncmpcpp_browser_ui_mode: 'columns'
+
+# browser row-sort song order: 'name', 'mtime', 'format', 'noop'
+ncmpcpp_browser_row_sort_order: 'format'
+
+# for 'name' browser_row_sort_order, define tags to sort by
+ncmpcpp_browser_name_sort_tags: !unsafe '{%n}{%t}|{%f}{(%l)}'
+
+# show hidden files/dirs (i.e. dotfiles/dotdirs) in browser
+ncmpcpp_browser_show_hidden_files: false
+
+# allow deleting files/dirs from disk (only in browser ui)
+ncmpcpp_browser_allow_delete_files: true
+

@@ -163,23 +163,20 @@ playlist_disable_highlight_delay = {{ ncmpcpp_playlist_highlight_sel_row_seconds
 
 # BROWSER UI ###################################################################
 
-## Browser UI Mode (classic/columns)
-#browser_display_mode = columns
+# browser ui mode: 'classic', 'columns'
+browser_display_mode = {{ ncmpcpp_browser_ui_mode }}
 
-## When Rows Of Songs Displayed In Browser, Define The Sort Order
-## Note: Options Are name / mtime / format / noop
-#browser_sort_mode = format
+# browser row-sort song order: 'name', 'mtime', 'format', 'noop'
+browser_sort_mode = {{ ncmpcpp_browser_row_sort_order }}
 
-## If browser_sort_mode = name, Define The Tags To Sort By
-{% raw -%}
-#browser_sort_format = {%n}{%t}|{%f}{(%l)}
-{% endraw %}
+# for 'name' browser_row_sort_order, define tags to sort by
+browser_sort_format = {{ ncmpcpp_browser_name_sort_tags }}
 
-## Show Hidden Files/Dirs (i.e. Dotfiles/Dotdirs) In Browser
-#show_hidden_files_in_local_browser = no
+# show hidden files/dirs (i.e. dotfiles/dotdirs) in browser
+show_hidden_files_in_local_browser = {{ 'yes' if ncmpcpp_browser_show_hidden_files else 'no' }}
 
-## Allow Deleting Files/Dirs From Disk (Only In Browser UI)
-#allow_for_physical_item_deletion = yes
+# allow deleting files/dirs from disk (only in browser ui)
+allow_for_physical_item_deletion = {{ 'yes' if ncmpcpp_browser_allow_delete_files else 'no' }}
 
 # MEDIA LIBRARY UI #############################################################
 
