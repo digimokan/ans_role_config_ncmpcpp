@@ -180,16 +180,15 @@ allow_for_physical_item_deletion = {{ 'yes' if ncmpcpp_browser_allow_delete_file
 
 # MEDIA LIBRARY UI #############################################################
 
-## Make Media Library Sort By mtime
-#media_library_sort_by_mtime = yes
+# make media library sort by mtime
+media_library_sort_by_mtime = {{ 'yes' if ncmpcpp_media_lib_sort_by_mtime else 'no' }}
 
-## First Column Of Media Lib (artist/album_artist/date/genre/composer/performer)
-#media_library_primary_tag = album_artist
+# first column of media lib: 'artist', 'album_artist', 'date', 'genre',
+#                            'composer', 'performer'
+media_library_primary_tag = {{ ncmpcpp_media_lib_first_column }}
 
-## Right Songs Row Format
-{% raw -%}
-#song_library_format = [{%A}] {%a -} {%t}|{%f}
-{% endraw %}
+# media lib songs row format
+song_library_format = {{ ncmpcpp_media_lib_row_format }}
 
 # SEARCH ENGINE UI #############################################################
 

@@ -1,0 +1,10 @@
+# make media library sort by mtime
+ncmpcpp_media_lib_sort_by_mtime: true
+
+# first column of media lib: 'artist', 'album_artist', 'date', 'genre',
+#                            'composer', 'performer'
+ncmpcpp_media_lib_first_column: 'album_artist'
+
+# media lib songs row format
+ncmpcpp_media_lib_row_format: !unsafe '[{%A}] {%a -} {%t}|{%f}'
+
