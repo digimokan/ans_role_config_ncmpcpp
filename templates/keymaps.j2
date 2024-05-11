@@ -89,11 +89,11 @@ def_key "{{ ncmpcpp_keymap_move_to_prev_column }}"
 
 # SELECTION ####################################################################
 
-# toggle show-highlighed-track-info/tags
+# toggle show-highlighted-track-info/tags
 def_key "{{ ncmpcpp_keymap_toggle_show_highlighted_track_info }}"
   show_song_info
 
-# toggle show highlighed-artist-info (fetches from internet)
+# toggle show highlighted-artist-info (fetches from internet)
 def_key "{{ ncmpcpp_keymap_toggle_show_highlighted_artist_info }}"
   show_artist_info
 
@@ -201,32 +201,32 @@ def_key "{{ ncmpcpp_keymap_toggle_random_next_playlist_track_mode }}"
 def_key "{{ ncmpcpp_keymap_shuffle_all_playlist_tracks }}"
   shuffle
 
-# ################################### BROWSER ####################################
+# BROWSER ######################################################################
 
-# # Enter Directory
-# def_key "l"
-#   enter_directory
+# enter directory
+def_key "{{ ncmpcpp_keymap_enter_dir }}"
+  enter_directory
 
-# # Go Up One Directory
-# def_key "h"
-#   jump_to_parent_directory
+# go to parent dir
+def_key "{{ ncmpcpp_keymap_go_to_parent_dir }}"
+  jump_to_parent_directory
 
-# # Add Directory/Song To End Of Playlist
-# def_key "a"
-#   add_item_to_playlist
+# add highlighted/selected directory/track to end of playlist
+def_key "{{ ncmpcpp_keymap_add_to_end_of_playlist }}"
+  add_item_to_playlist
 
-# # Add Directory/Song To End Of Playlist And Play It Now
-# def_key "A"
-#   play_item
-#   scroll_down
+# add highlighted/selected directory/track to end of playlist, and play it now
+def_key "{{ ncmpcpp_keymap_add_to_end_of_playlist_and_play_it }}"
+  play_item
+  scroll_down
 
-# # Edit Highlighted Directory Name
-# def_key "e"
-#   edit_directory_name
+# edit highlighted directory name
+def_key "{{ ncmpcpp_keymap_edit_highlighted_dir_name }}"
+  edit_directory_name
 
-# # Delete Directory/Song From Disk
-# def_key "delete"
-#   delete_browser_items
+# delete directory/track from disk
+def_key "{{ ncmpcpp_keymap_delete_dir_or_track_from_disk }}"
+  delete_browser_items
 
 # ################################## PLAYLIST ####################################
 

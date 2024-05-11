@@ -1,0 +1,18 @@
+# enter directory
+ncmpcpp_keymap_enter_dir: 'l'
+
+# go to parent dir
+ncmpcpp_keymap_go_to_parent_dir: 'h'
+
+# add highlighted/selected directory/track to end of playlist
+ncmpcpp_keymap_add_to_end_of_playlist: 'a'
+
+# add highlighted/selected directory/track to end of playlist, and play it now
+ncmpcpp_keymap_add_to_end_of_playlist_and_play_it: 'A'
+
+# edit highlighted directory name
+ncmpcpp_keymap_edit_highlighted_dir_name: 'e'
+
+# delete directory/track from disk
+ncmpcpp_keymap_delete_dir_or_track_from_disk: 'delete'
+

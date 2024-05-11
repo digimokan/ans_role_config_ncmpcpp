@@ -1,7 +1,7 @@
-# toggle show-highlighed-track-info/tags
+# toggle show-highlighted-track-info/tags
 ncmpcpp_keymap_toggle_show_highlighted_track_info: 'i'
 
-# toggle show highlighed-artist-info (fetches from internet)
+# toggle show highlighted-artist-info (fetches from internet)
 ncmpcpp_keymap_toggle_show_highlighted_artist_info: 'I'
 
 # select currently highlighted item
