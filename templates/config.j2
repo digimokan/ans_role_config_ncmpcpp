@@ -223,9 +223,9 @@ ask_before_clearing_playlists = {{ 'yes' if ncmpcpp_playlist_editor_confirm_play
 
 # TAG EDITOR UI ################################################################
 
-## Default Pattern Used By Tag Editor's Parser
-#default_tag_editor_pattern = %n - %t
+# default pattern used by tag editor parser
+default_tag_editor_pattern = {{ ncmpcpp_tag_editor_default_pattern }}
 
-## Make Tag Editor Number Tracks 01/12 (if yes) Or Just 01 (if no)
-#tag_editor_extended_numeration = no
+# make tag editor number tracks 01/12 (if yes) or just 01 (if no)
+tag_editor_extended_numeration = {{ 'yes' if ncmpcpp_tag_editor_use_x_of_xx_track_nums else 'no' }}
 

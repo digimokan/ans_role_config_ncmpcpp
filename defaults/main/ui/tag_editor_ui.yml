@@ -1,0 +1,6 @@
+# default pattern used by tag editor parser
+ncmpcpp_tag_editor_default_pattern: !unsafe '%n - %t'
+
+# make tag editor number tracks 01/12 (if yes) or just 01 (if no)
+ncmpcpp_tag_editor_use_x_of_xx_track_nums: false
+
