@@ -131,20 +131,6 @@ def_key "{{ ncmpcpp_keymap_add_selected_items_to_playlist }}"
 def_key "{{ ncmpcpp_keymap_run_selected_action }}"
   run_action
 
-# SEARCH #######################################################################
-
-# find a track (in browser/playlist/etc)
-def_key "{{ ncmpcpp_keymap_search_for_track }}"
-  find
-def_key "{{ ncmpcpp_keymap_search_for_track }}"
-  find_item_forward
-
-# go to next/prev found item
-def_key "{{ ncmpcpp_keymap_next_found_item }}"
-  next_found_item
-def_key "{{ ncmpcpp_keymap_prev_found_item }}"
-  previous_found_item
-
 # PLAYBACK #####################################################################
 
 # volume up/down
@@ -201,6 +187,24 @@ def_key "{{ ncmpcpp_keymap_toggle_random_next_playlist_track_mode }}"
 def_key "{{ ncmpcpp_keymap_shuffle_all_playlist_tracks }}"
   shuffle
 
+# PLAYLIST #####################################################################
+
+# save current playlist as
+def_key "{{ ncmpcpp_keymap_save_playlist_as }}"
+  save_playlist
+
+# remove playlist item (does not remove from disk)
+def_key "{{ ncmpcpp_keymap_remove_playlist_item }}"
+  delete_playlist_items
+
+# crop playlist (remove all items not currently selected)
+def_key "{{ ncmpcpp_keymap_crop_unselected_from_playlist }}"
+  crop_main_playlist
+
+# clear current playlist
+def_key "{{ ncmpcpp_keymap_clear_playlist }}"
+  clear_main_playlist
+
 # BROWSER ######################################################################
 
 # enter directory
@@ -228,23 +232,19 @@ def_key "{{ ncmpcpp_keymap_edit_highlighted_dir_name }}"
 def_key "{{ ncmpcpp_keymap_delete_dir_or_track_from_disk }}"
   delete_browser_items
 
-# PLAYLIST #####################################################################
+# SEARCH #######################################################################
 
-# save current playlist as
-def_key "{{ ncmpcpp_keymap_save_playlist_as }}"
-  save_playlist
+# find a track (in browser/playlist/etc)
+def_key "{{ ncmpcpp_keymap_search_for_track }}"
+  find
+def_key "{{ ncmpcpp_keymap_search_for_track }}"
+  find_item_forward
 
-# remove playlist item (does not remove from disk)
-def_key "{{ ncmpcpp_keymap_remove_playlist_item }}"
-  delete_playlist_items
-
-# crop playlist (remove all items not currently selected)
-def_key "{{ ncmpcpp_keymap_crop_unselected_from_playlist }}"
-  crop_main_playlist
-
-# clear current playlist
-def_key "{{ ncmpcpp_keymap_clear_playlist }}"
-  clear_main_playlist
+# go to next/prev found item
+def_key "{{ ncmpcpp_keymap_next_found_item }}"
+  next_found_item
+def_key "{{ ncmpcpp_keymap_prev_found_item }}"
+  previous_found_item
 
 # ################################# SEARCH ENGINE ################################
 
