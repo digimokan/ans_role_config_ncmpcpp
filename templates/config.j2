@@ -210,17 +210,16 @@ regular_expressions = {{ ncmpcpp_search_engine_regex_type }}
 # block fields in search engine above reset button after successful search
 block_search_constraints_change_if_items_found = {{ 'yes' if ncmpcpp_search_engine_block_fields_on_success else 'no' }}
 
-
 # PLAYLIST EDITOR UI ###########################################################
 
-## Playlist Editor UI Mode (classic/columns)
-#playlist_editor_display_mode = classic
+# playlist editor UI mode: 'classic', 'columns'
+playlist_editor_display_mode = {{ ncmpcpp_playlist_editor_ui_mode }}
 
-## Do Not Use \?*:|"<> In Generated Filenames
-#generate_win32_compatible_filenames = yes
+# gen filenames without win32-breaking '\', '?', '*', ':', '|', '"', '<', '>'
+generate_win32_compatible_filenames = {{ 'yes' if ncmpcpp_playlist_editor_gen_win32_compat_filenames else 'no' }}
 
-## Confirm Playlist Deletion
-#ask_before_clearing_playlists = yes
+# confirm playlist deletion
+ask_before_clearing_playlists = {{ 'yes' if ncmpcpp_playlist_editor_confirm_playlist_delete else 'no' }}
 
 # TAG EDITOR UI ################################################################
 

@@ -1,0 +1,9 @@
+# playlist editor UI mode: 'classic', 'columns'
+ncmpcpp_playlist_editor_ui_mode: 'classic'
+
+# gen filenames without win32-breaking '\', '?', '*', ':', '|', '"', '<', '>'
+ncmpcpp_playlist_editor_gen_win32_compat_filenames: true
+
+# confirm playlist deletion
+ncmpcpp_playlist_editor_confirm_playlist_delete: true
+
