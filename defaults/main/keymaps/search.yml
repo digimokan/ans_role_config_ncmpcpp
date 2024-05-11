@@ -1,16 +1,7 @@
-# Find A Song (In Browser/Playlist/Etc.)
-# def_key "/"
-#   find
+# find a track (in browser/playlist/etc)
+ncmpcpp_keymap_search_for_track: '/'
 
-# Find A Song (In Browser/Playlist/Etc.)
-# def_key "/"
-#   find_item_forward
-
-# Go To Next Found Item
-# def_key "n"
-#   next_found_item
-
-# Go To Previous Found Item
-# def_key "N"
-#   previous_found_item
+# go to next/prev found item
+ncmpcpp_keymap_next_found_item: 'n'
+ncmpcpp_keymap_prev_found_item: 'N'
 

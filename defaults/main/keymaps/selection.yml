@@ -1,44 +1,31 @@
-# Toggle Show Of Info/Tags For Highlighed Song
-# def_key "i"
-#   show_song_info
+# toggle show-highlighed-track-info/tags
+ncmpcpp_keymap_toggle_show_highlighted_track_info: 'i'
 
-# Toggle Show Of Info For Highlighed Artist (Fetches From Internet!)
-# def_key "I"
-#   show_artist_info
+# toggle show highlighed-artist-info (fetches from internet)
+ncmpcpp_keymap_toggle_show_highlighted_artist_info: 'I'
 
-# Select Currently Highlighted Item
-# def_key "t"
-#   select_item
+# select currently highlighted item
+ncmpcpp_keymap_select_highlighted_item: 't'
 
-# Unselect Any Selected Items
-# def_key "u"
-#   remove_selection
+# unselect any selected items
+ncmpcpp_keymap_unselect_items: 'u'
 
-# Select Range From Selected Item To Next Selected Item
-# def_key "x"
-#   select_range
+# select range from first selected item to last selected item
+ncmpcpp_keymap_select_range: 'x'
 
-# Reverse Current Selection
-# def_key "X"
-#   reverse_selection
+# reverse current selection
+ncmpcpp_keymap_reverse_current_selection: 'X'
 
-# Move Selected Items Up One Row
-# def_key "up"
-#   move_selected_items_up
+# move selected items up/down one row
+ncmpcpp_keymap_move_selected_item_up_one_row: 'up'
+ncmpcpp_keymap_move_selected_item_down_one_row: 'down'
 
-# Move Selected Items Down One Row
-# def_key "down"
-#   move_selected_items_down
+# move selected items to cursor position
+ncmpcpp_keymap_move_selected_items_to_cursor_pos: '\\'
 
-# Move Selected Items To Cursor Position
-# def_key "\\"
-#   move_selected_items_to
+# add selected items to user-selected playlist
+ncmpcpp_keymap_add_selected_items_to_playlist: 'E'
 
-# Add Selected Items To User-Selected Playlist
-# def_key "E"
-#   add_selected_items
-
-# Run Selected Action
-# def_key "enter"
-#   run_action
+# run selected action
+ncmpcpp_keymap_run_selected_action: 'enter'
 

@@ -1,4 +1,3 @@
 # update mpd database now
-# def_key "F"
-  # update_database
+ncmpcpp_keymap_update_mpd_db_now: 'F'
 
