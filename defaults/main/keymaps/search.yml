@@ -1,0 +1,16 @@
+# Find A Song (In Browser/Playlist/Etc.)
+# def_key "/"
+#   find
+
+# Find A Song (In Browser/Playlist/Etc.)
+# def_key "/"
+#   find_item_forward
+
+# Go To Next Found Item
+# def_key "n"
+#   next_found_item
+
+# Go To Previous Found Item
+# def_key "N"
+#   previous_found_item
+

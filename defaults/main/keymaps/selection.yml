@@ -1,0 +1,44 @@
+# Toggle Show Of Info/Tags For Highlighed Song
+# def_key "i"
+#   show_song_info
+
+# Toggle Show Of Info For Highlighed Artist (Fetches From Internet!)
+# def_key "I"
+#   show_artist_info
+
+# Select Currently Highlighted Item
+# def_key "t"
+#   select_item
+
+# Unselect Any Selected Items
+# def_key "u"
+#   remove_selection
+
+# Select Range From Selected Item To Next Selected Item
+# def_key "x"
+#   select_range
+
+# Reverse Current Selection
+# def_key "X"
+#   reverse_selection
+
+# Move Selected Items Up One Row
+# def_key "up"
+#   move_selected_items_up
+
+# Move Selected Items Down One Row
+# def_key "down"
+#   move_selected_items_down
+
+# Move Selected Items To Cursor Position
+# def_key "\\"
+#   move_selected_items_to
+
+# Add Selected Items To User-Selected Playlist
+# def_key "E"
+#   add_selected_items
+
+# Run Selected Action
+# def_key "enter"
+#   run_action
+

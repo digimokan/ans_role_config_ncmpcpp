@@ -1,7 +1,15 @@
-- name: "Write all MPD settings to '{{ ncmpcpp_user_config_file_path }}'"
+- name: "Write all ncmpcpp settings to '{{ ncmpcpp_user_config_file_path }}'"
   ansible.builtin.template:
     dest: "{{ ncmpcpp_user_config_file_path }}"
     src: "config.j2"
+    force: true
+  become: true
+  become_user: "{{ ncmpcpp_user_name }}"
+
+- name: "Write all ncmpcpp keymaps to '{{ ncmpcpp_user_keymaps_file_path }}'"
+  ansible.builtin.template:
+    dest: "{{ ncmpcpp_user_keymaps_file_path }}"
+    src: "keymaps.j2"
     force: true
   become: true
   become_user: "{{ ncmpcpp_user_name }}"

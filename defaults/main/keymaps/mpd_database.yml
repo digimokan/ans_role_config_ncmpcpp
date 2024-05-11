@@ -1,0 +1,4 @@
+# update mpd database now
+def_key "F"
+  update_database
+

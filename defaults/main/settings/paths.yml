@@ -4,6 +4,9 @@ ncmpcpp_user_config_dir: "/home/{{ ncmpcpp_user_name }}/.config/ncmpcpp"
 # main ncmpcpp config file path
 ncmpcpp_user_config_file_path: "{{ ncmpcpp_user_config_dir }}/config"
 
+# main ncmpcpp config file path
+ncmpcpp_user_keymaps_file_path: "{{ ncmpcpp_user_config_dir }}/bindings"
+
 # lyrics dir (other apps may expect ~/.lyrics)
 ncmpcpp_user_lyrics_dir: "/home/{{ ncmpcpp_user_name }}/.lyrics"
 

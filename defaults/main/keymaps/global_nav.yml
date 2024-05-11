@@ -1,0 +1,36 @@
+# show all keymaps
+ncmpcpp_keymap_show_help: '?'
+
+# go to playlist
+ncmpcpp_keymap_go_to_playlist: 'o'
+
+# go to browser
+ncmpcpp_keymap_go_to_browser: 'w'
+
+# go to media library in 2-column mode
+ncmpcpp_keymap_go_to_media_lib: 'L'
+
+# go to search Engine
+ncmpcpp_keymap_go_to_search_engine: 's'
+
+# go to playlist editor
+ncmpcpp_keymap_go_to_playlist_editor: 'p'
+
+# go to tag Editor
+ncmpcpp_keymap_go_to_tag_editor: 'v'
+
+# Jump To Highlighted Item In Browser
+ncmpcpp_keymap_jump_to_highlighted_in_browser: 'W'
+
+# jump to highlighted item in playlist editor
+ncmpcpp_keymap_jump_to_highlighted_in_playlist_editor: 'P'
+
+# jump to highlighted item in tag Editor
+ncmpcpp_keymap_jump_to_highlighted_in_tag_editor: 'V'
+
+# jump to highlighted in tiny tag editor
+ncmpcpp_keymap_jump_to_highlighted_in_tiny_tag_editor: 'e'
+
+# quit ncmpcpp
+ncmpcpp_keymap_quit_ncmpcpp: 'q'
+
