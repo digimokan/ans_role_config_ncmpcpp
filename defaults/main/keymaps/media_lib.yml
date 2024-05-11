@@ -1,0 +1,6 @@
+# edit highlighted tag
+ncmpcpp_keymap_edit_highlighted_tag: 'e'
+
+# edit highlighted library album
+ncmpcpp_keymap_edit_highlighted_album: 'e'
+

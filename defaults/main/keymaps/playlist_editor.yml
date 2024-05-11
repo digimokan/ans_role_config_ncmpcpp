@@ -1,0 +1,6 @@
+# edit highlighted playlist name
+ncmpcpp_keymap_edit_highlighted_playlist_name: 'e'
+
+# delete currently selected playlist
+ncmpcpp_keymap_deleted_selected_playlist: 'delete'
+

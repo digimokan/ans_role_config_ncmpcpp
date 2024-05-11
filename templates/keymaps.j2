@@ -232,6 +232,16 @@ def_key "{{ ncmpcpp_keymap_edit_highlighted_dir_name }}"
 def_key "{{ ncmpcpp_keymap_delete_dir_or_track_from_disk }}"
   delete_browser_items
 
+# MEDIA LIBRARY ################################################################
+
+# edit highlighted tag
+def_key "{{ ncmpcpp_keymap_edit_highlighted_tag }}"
+  edit_library_tag
+
+# edit highlighted library album
+def_key "{{ ncmpcpp_keymap_edit_highlighted_album }}"
+  edit_library_album
+
 # SEARCH #######################################################################
 
 # find a track (in browser/playlist/etc)
@@ -254,7 +264,25 @@ def_key "{{ ncmpcpp_keymap_start_search_eng_search }}"
 def_key "{{ ncmpcpp_keymap_reset_search_eng }}"
   reset_search_engine
 
-# ################################# MEDIA LIBRARY ################################
+# PLAYLIST EDITOR ##############################################################
+
+# edit highlighted playlist name
+def_key "{{ ncmpcpp_keymap_edit_highlighted_playlist_name }}"
+  edit_playlist_name
+
+# delete currently selected playlist
+def_key "{{ ncmpcpp_keymap_deleted_selected_playlist }}"
+  delete_stored_playlist
+
+# crop playlist (remove all items not currently selected)
+def_key "{{ ncmpcpp_keymap_crop_unselected_from_playlist }}"
+  crop_playlist
+
+# clear current playlist
+def_key "{{ ncmpcpp_keymap_clear_playlist }}"
+  clear_playlist
+
+# TAG EDITOR ###################################################################
 
 # # Edit Highlighted Tag
 # def_key "e"
@@ -263,32 +291,4 @@ def_key "{{ ncmpcpp_keymap_reset_search_eng }}"
 # # Edit Highlighted Library Album
 # def_key "e"
 #   edit_library_album
-
-# ################################## TAG EDITOR ##################################
-
-# # Edit Highlighted Tag
-# def_key "e"
-#   edit_library_tag
-
-# # Edit Highlighted Library Album
-# def_key "e"
-#   edit_library_album
-
-# ################################ PLAYLIST EDITOR ###############################
-
-# # Edit Highlighted Playlist Name
-# def_key "e"
-#   edit_playlist_name
-
-# # Crop Playlist (Remove All Items Not Currently Selected)
-# def_key "C"
-#   crop_playlist
-
-# # Clear Currently Selected Playlist
-# def_key "c"
-#   clear_playlist
-
-# # Delete Currently Selected Playlist
-# def_key "delete"
-#   delete_stored_playlist
 
