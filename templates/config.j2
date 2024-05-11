@@ -192,23 +192,24 @@ song_library_format = {{ ncmpcpp_media_lib_row_format }}
 
 # SEARCH ENGINE UI #############################################################
 
-## Search Engine UI Mode (classic/columns)
-#search_engine_display_mode = classic
+# search engine UI mode: 'classic' 'columns'
+search_engine_display_mode = {{ ncmpcpp_search_engine_ui_mode }}
 
-## Default Search Location (database/playlist) - Also Selectable In UI
-#default_place_to_search_in = database
+# default search location: 'database', 'playlist'
+default_place_to_search_in = {{ ncmpcpp_search_engine_default_search_loc }}
 
-## Search Mode:
-##   1 - mpd built-in searching (no regexes, pattern matching)
-##   2 - ncmpcpp searching (pattmatching, but may need to download dbase...)
-##   3 - split searching (use mode 1 for dbase search, mode 2 for playlist srch)
-#search_engine_default_search_mode = 1
+# search mode:
+#   1 - mpd built-in searching (no regexes, pattern matching)
+#   2 - ncmpcpp searching (patt match, but may need to download dbase)
+#   3 - use mode mpd for dbase search, ncmpcpp for playlist search
+search_engine_default_search_mode = {{ 3 if (ncmpcpp_se_mode == 'combined') else (2 if (ncmpcpp_se_mode == 'ncmpcpp') else 1) }}
 
-## Type Of Regexes To use (none/basic/extended/perl)
-#regular_expressions = extended
+# type of regexes to use: 'none', 'basic', 'extended', 'perl'
+regular_expressions = {{ ncmpcpp_search_engine_regex_type }}
 
-## After Successful Search, Block Fields In Search Engine Above Reset Button
-#block_search_constraints_change_if_items_found = yes
+# block fields in search engine above reset button after successful search
+block_search_constraints_change_if_items_found = {{ 'yes' if ncmpcpp_search_engine_block_fields_on_success else 'no' }}
+
 
 # PLAYLIST EDITOR UI ###########################################################
 

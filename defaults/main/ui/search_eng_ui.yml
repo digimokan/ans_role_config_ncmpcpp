@@ -1,0 +1,18 @@
+# search engine UI mode: 'classic' 'columns'
+ncmpcpp_search_engine_ui_mode: 'classic'
+
+# default search location: 'database', 'playlist'
+ncmpcpp_search_engine_default_search_loc: 'database'
+
+# search mode:
+#   'mpd' - mpd built-in searching (no regexes, pattern matching)
+#   'ncmpcpp' - ncmpcpp searching (patt match, but may need to download dbase)
+#   'combined' - use mode mpd for dbase search, ncmpcpp for playlist search
+ncmpcpp_se_mode: 'mpd'
+
+# type of regexes to use: 'none', 'basic', 'extended', 'perl'
+ncmpcpp_search_engine_regex_type: 'extended'
+
+# block fields in search engine above reset button after successful search
+ncmpcpp_search_engine_block_fields_on_success: true
+
