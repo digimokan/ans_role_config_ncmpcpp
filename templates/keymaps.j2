@@ -145,67 +145,61 @@ def_key "{{ ncmpcpp_keymap_next_found_item }}"
 def_key "{{ ncmpcpp_keymap_prev_found_item }}"
   previous_found_item
 
-############################### GLOBAL PLAYBACK ################################
+# PLAYBACK #####################################################################
 
-# # Volume Up
-# def_key "="
-#   volume_up
+# volume up/down
+def_key "{{ ncmpcpp_keymap_volume_up }}"
+  volume_up
+def_key "{{ ncmpcpp_keymap_volume_down }}"
+  volume_down
 
-# # Volume Down
-# def_key "-"
-#   volume_down
+# play highlighted track from start
+def_key "{{ ncmpcpp_keymap_play_highlighted_from_start }}"
+  play_item
 
-# # Stop Music Playing
-# def_key ";"
-#   stop
+# stop playback
+def_key "{{ ncmpcpp_keymap_stop_playback }}"
+  stop
 
-# # Play Highlighted Song
-# def_key "f"
-#   play_item
+# pause / unpause current track
+def_key "{{ ncmpcpp_keymap_pause_unpause }}"
+  pause
 
-# # Pause / Unpause Current Song
-# def_key "space"
-#   pause
+# replay current track
+def_key "{{ ncmpcpp_keymap_replay_current_track }}"
+  replay_song
 
-# # Next Song
-# def_key "."
-#   next
+# play next/previous track
+def_key "{{ ncmpcpp_keymap_play_next_track }}"
+  next
+def_key "{{ ncmpcpp_keymap_play_prev_track }}"
+  previous
 
-# # Previous Song
-# def_key ","
-#   previous
+# seek forward/backward in current track
+def_key "{{ ncmpcpp_keymap_seek_fwd_in_current_track }}"
+  seek_forward
+def_key "{{ ncmpcpp_keymap_seek_back_in_current_track }}"
+  seek_backward
 
-# # Replay Current Song
-# def_key "H"
-#   replay_song
+# jump to specified position (percentage) in current song
+def_key "{{ ncmpcpp_keymap_jump_to_pos_in_current_track }}"
+  jump_to_position_in_song
 
-# # Seek Forward In Current Song
-# def_key ">"
-#   seek_forward
+# go to item/row for currently playing song (in whatever screen is up)
+def_key "{{ ncmpcpp_keymap_go_to_row_of_current_track }}"
+  jump_to_playing_song
 
-# # Seek Backward In Current Song
-# def_key "<"
-#   seek_backward
+# toggle playlist repeat mode
+def_key "{{ ncmpcpp_keymap_toggle_playlist_repeat_mode }}"
+  toggle_repeat
 
-# # Jump To Specified Position In Current Song
-# def_key "y"
-#   jump_to_position_in_song
+# toggle random-next-playlist-track mode
+def_key "{{ ncmpcpp_keymap_toggle_random_next_playlist_track_mode }}"
+  toggle_random
 
-# # Go To Item For Currently Playing Song (In Whatever Screen Is Up)
-# def_key "b"
-#   jump_to_playing_song
-
-# # Toggle Repeat Mode (For Playlist - Not Song)
-# def_key "r"
-#   toggle_repeat
-
-# # Toggle Random Mode (Next Song Is Random Playlist Song)
-# def_key "z"
-#   toggle_random
-
-# # Shuffle All Songs Around In Current Playlist
-# def_key "Z"
-#   shuffle
+# shuffle all songs around in current playlist
+def_key "{{ ncmpcpp_keymap_shuffle_all_playlist_tracks }}"
+  shuffle
 
 # ################################### BROWSER ####################################
 

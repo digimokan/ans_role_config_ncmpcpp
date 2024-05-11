@@ -1,0 +1,39 @@
+# volume up/down
+ncmpcpp_keymap_volume_up: '='
+ncmpcpp_keymap_volume_down: '-'
+
+# play highlighted track from start
+ncmpcpp_keymap_play_highlighted_from_start: 'f'
+
+# stop playback
+ncmpcpp_keymap_stop_playback: ';'
+
+# pause / unpause current track
+ncmpcpp_keymap_pause_unpause: 'space'
+
+# replay current track
+ncmpcpp_keymap_replay_current_track: 'H'
+
+# play next/previous track
+ncmpcpp_keymap_play_next_track: '.'
+ncmpcpp_keymap_play_prev_track: ','
+
+# seek forward/backward in current track
+ncmpcpp_keymap_seek_fwd_in_current_track: '>'
+ncmpcpp_keymap_seek_back_in_current_track: '<'
+
+# jump to specified position (percentage) in current song
+ncmpcpp_keymap_jump_to_pos_in_current_track: 'y'
+
+# go to item/row for currently playing song (in whatever screen is up)
+ncmpcpp_keymap_go_to_row_of_current_track: 'b'
+
+# toggle playlist repeat mode
+ncmpcpp_keymap_toggle_playlist_repeat_mode: 'r'
+
+# toggle random-next-playlist-track mode
+ncmpcpp_keymap_toggle_random_next_playlist_track_mode: 'z'
+
+# shuffle all songs around in current playlist
+ncmpcpp_keymap_shuffle_all_playlist_tracks: 'Z'
+
