@@ -1,0 +1,12 @@
+# save current playlist as
+ncmpcpp_keymap_save_playlist_as: 'S'
+
+# remove playlist item (does not remove from disk)
+ncmpcpp_keymap_remove_playlist_item: 'd'
+
+# crop playlist (remove all items not currently selected)
+ncmpcpp_keymap_crop_unselected_from_playlist: 'C'
+
+# clear current playlist
+ncmpcpp_keymap_clear_playlist: 'c'
+

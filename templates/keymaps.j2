@@ -228,23 +228,23 @@ def_key "{{ ncmpcpp_keymap_edit_highlighted_dir_name }}"
 def_key "{{ ncmpcpp_keymap_delete_dir_or_track_from_disk }}"
   delete_browser_items
 
-# ################################## PLAYLIST ####################################
+# PLAYLIST #####################################################################
 
-# # Save Current Playlist As
-# def_key "S"
-#   save_playlist
+# save current playlist as
+def_key "{{ ncmpcpp_keymap_save_playlist_as }}"
+  save_playlist
 
-# # Remove Playlist Item (Not Remove From Disk)
-# def_key "d"
-#   delete_playlist_items
+# remove playlist item (does not remove from disk)
+def_key "{{ ncmpcpp_keymap_remove_playlist_item }}"
+  delete_playlist_items
 
-# # Crop Playlist (Remove All Items Not Currently Selected)
-# def_key "C"
-#   crop_main_playlist
+# crop playlist (remove all items not currently selected)
+def_key "{{ ncmpcpp_keymap_crop_unselected_from_playlist }}"
+  crop_main_playlist
 
-# # Clear Current Playlist
-# def_key "c"
-#   clear_main_playlist
+# clear current playlist
+def_key "{{ ncmpcpp_keymap_clear_playlist }}"
+  clear_main_playlist
 
 # ################################# SEARCH ENGINE ################################
 
