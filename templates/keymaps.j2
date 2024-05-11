@@ -246,15 +246,13 @@ def_key "{{ ncmpcpp_keymap_next_found_item }}"
 def_key "{{ ncmpcpp_keymap_prev_found_item }}"
   previous_found_item
 
-# ################################# SEARCH ENGINE ################################
+# search for search-engine entered items now
+def_key "{{ ncmpcpp_keymap_start_search_eng_search }}"
+  start_searching
 
-# # Search For Entered Items Now
-# def_key "s"
-#   start_searching
-
-# # Reset Entered Items
-# def_key "m"
-#   reset_search_engine
+# reset search-engine entered items
+def_key "{{ ncmpcpp_keymap_reset_search_eng }}"
+  reset_search_engine
 
 # ################################# MEDIA LIBRARY ################################
 

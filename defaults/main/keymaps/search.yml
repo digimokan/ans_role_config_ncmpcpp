@@ -5,3 +5,9 @@ ncmpcpp_keymap_search_for_track: '/'
 ncmpcpp_keymap_next_found_item: 'n'
 ncmpcpp_keymap_prev_found_item: 'N'
 
+# search for search-engine entered items now
+ncmpcpp_keymap_start_search_eng_search: 's'
+
+# reset search-engine entered items
+ncmpcpp_keymap_reset_search_eng: 'm'
+
