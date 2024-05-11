@@ -1,32 +1,16 @@
-# Scroll Up By 1 Row
-# def_key "k"
-#   scroll_up
+# scroll up/down by 1 row
+ncmpcpp_keymap_scroll_up_one_row: 'k'
+ncmpcpp_keymap_scroll_down_one_row: 'j'
 
-# Scroll Down By 1 Row
-# def_key "j"
-#   scroll_down
+# scroll up/down by 1 page
+ncmpcpp_keymap_scroll_up_one_page: 'page_up'
+ncmpcpp_keymap_scroll_down_one_page: 'page_down'
 
-# Scroll Up By 1 Page
-# def_key "page_up"
-#   page_up
+# go to first/last row
+ncmpcpp_keymap_go_to_first_row: 'g'
+ncmpcpp_keymap_go_to_last_row: 'G'
 
-# Scroll Down By 1 Page
-# def_key "page_down"
-#   page_down
-
-# Go To First Row
-# def_key "g"
-#   move_home
-
-# Go To Last Row
-# def_key "G"
-#   move_end
-
-# Move To Next Column
-# def_key "right"
-#   next_column
-
-# Move To Prev Column
-# def_key "left"
-#   previous_column
+# move to next/prev column
+ncmpcpp_keymap_move_to_next_column: 'right'
+ncmpcpp_keymap_move_to_prev_column: 'left'
 

@@ -55,6 +55,32 @@ def_key "{{ ncmpcpp_keymap_jump_to_highlighted_in_tiny_tag_editor }}"
 def_key "{{ ncmpcpp_keymap_quit_ncmpcpp }}"
   quit
 
+# PAGE NAV #####################################################################
+
+# scroll up/down by 1 row
+def_key "{{ ncmpcpp_keymap_scroll_up_one_row }}"
+  scroll_up
+def_key "{{ ncmpcpp_keymap_scroll_down_one_row }}"
+   scroll_down
+
+# scroll up/down by 1 page
+ def_key "{{ ncmpcpp_keymap_scroll_up_one_page }}"
+   page_up
+ def_key "{{ ncmpcpp_keymap_scroll_down_one_page }}"
+   page_down
+
+# go to first/last row
+ def_key "{{ ncmpcpp_keymap_go_to_first_row }}"
+   move_home
+ def_key "{{ ncmpcpp_keymap_go_to_last_row }}"
+   move_end
+
+# move to next/prev column
+ def_key "{{ ncmpcpp_keymap_move_to_next_column }}"
+   next_column
+ def_key "{{ ncmpcpp_keymap_move_to_prev_column }}"
+   previous_column
+
 ############################### GLOBAL PLAYBACK ################################
 
 # # Volume Up
